@@ -8,12 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Core\DTO\" />
-    <Folder Include="Core\Interfaces\" />
     <Folder Include="Core\Settings\" />
     <Folder Include="Core\Services\" />
     <Folder Include="Infraestructure\Data\" />
     <Folder Include="Infraestructure\Shared\" />
-    <Folder Include="Infraestructure\Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
