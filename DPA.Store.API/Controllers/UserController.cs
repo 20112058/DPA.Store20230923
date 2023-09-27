@@ -31,6 +31,15 @@ namespace DPA.Store.API.Controllers
             return Ok(result);
         }
 
+        [HttpPost("Inicio Sesion")]
+        public async Task<IActionResult> Validacion(string email, string contrasena)
+        {
+            var result = await _userRepository.Validacion(email, contrasena);
+            if(!result)
+                return Unauthorized(result);
+            return Ok(result);
+        }
+
         [HttpDelete("Eliminar Usuario/{id}")]
         public async Task<IActionResult> Delete(int id)
         {

@@ -47,5 +47,6 @@ namespace DPA.Store.DOMAIN.Infraestructure.Repositories
             return rows > 0;
         }
 
+
     }
 }

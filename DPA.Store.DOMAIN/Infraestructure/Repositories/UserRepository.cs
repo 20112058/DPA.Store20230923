@@ -29,6 +29,17 @@ namespace DPA.Store.DOMAIN.Infraestructure.Repositories
             return rows > 0;
         }
 
+        public async Task<bool> Validacion(string correo, string contrasena)
+        {
+            var validacion = await _dbContext.User.Where(x => x.Email == correo && x.Password == contrasena).FirstOrDefaultAsync();
+         
+            if (validacion == null)
+                return false;
+            return true;
+
+
+        }
+
         public async Task<bool> Delete(int id)
         {
             var iduser = await _dbContext.User.Where(x => x.Id == id).FirstOrDefaultAsync();

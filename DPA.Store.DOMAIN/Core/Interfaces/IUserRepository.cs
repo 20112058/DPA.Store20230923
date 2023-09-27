@@ -9,6 +9,8 @@ namespace DPA.Store.DOMAIN.Core.Interfaces
 
         Task<bool> Insert(User user);
 
+        Task<bool> Validacion(string correo, string contrasena);
+
         Task<bool> Delete(int id);
     }
 }
